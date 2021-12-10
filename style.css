@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #25272e;
+  -webkit-box-shadow: 0 1px 5px #494a52;
+          box-shadow: 0 1px 5px #494a52;
+  color: #f2f2f2;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 40px;
+  font-weight: 700;
+}
+
+header .brand_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  padding: 40px;
+}
+
+header .brand_info nav {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+header .brand_info nav div span {
+  margin-right: 1.3rem;
+  cursor: pointer;
+  padding-bottom: 20px;
+}
+
+header .brand_info nav div span:hover {
+  border-bottom: 5px solid #32ac82;
+}
+
+header .brand_info .header_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  width: 60%;
+}
+
+header .brand_info .header_nav .search {
+  background-color: #494a52;
+  padding: 3px 15px;
+  border-radius: 3px;
+  margin-right: 20px;
+  width: 50%;
+}
+
+header .brand_info .header_nav .search input {
+  outline: none;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  color: #f2f2f2;
+  width: 85%;
+}
+
+header .brand_info .header_nav .icon {
+  margin: 0 10px;
+  font-size: 2rem;
+}
+
+header .brand_info .header_nav .user_profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .brand_info .header_nav .user_profile img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .sidebar {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #25272e;
+  color: #f2f2f2;
+  padding: 40px;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: -1;
+  top: 80px;
+  height: calc(100vh - 80px);
+}
+
+main .sidebar .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0 10px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  border-bottom: 1px solid #494a52;
+  cursor: pointer;
+}
+
+main .main {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  background-color: #2b2c33;
+  color: #f2f2f2;
+  padding: 40px;
+  padding-top: 60px;
+}
+
+main .main .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .main .title button {
+  background-color: #38f2af;
+  padding: 10px;
+  color: #25272e;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+main .main .filter_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .main .filter {
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .main .filter div {
+  background-color: #494a52;
+  margin-right: 30px;
+  padding: 7px 15px;
+  border-radius: 5px;
+}
+
+main .main .filter div span:first-child {
+  margin-right: 40px;
+}
+
+main .art_collection {
+  background-color: #373943;
+  padding: 20px;
+  border-radius: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(290px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 20px;
+}
+
+main .art_collection .card {
+  background-color: #272a34;
+  border-radius: 10px;
+}
+
+main .art_collection .card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+main .art_collection .card .art_info {
+  padding: 10px 20px;
+  margin-bottom: 2vw;
+}
+
+main .art_collection .card .art_info h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+main .art_collection .card .art_info h6 {
+  font-size: 1rem;
+  color: #494a52;
+}
+
+main .art_collection .card .art_price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+  border-top: 2px solid #494a52;
+}
+
+main .art_collection .card .art_price p {
+  color: #32ac82;
+}
+
+main .art_collection .card .art_price .price {
+  color: #f2f2f2;
+  border-radius: 30px;
+  border: 1px solid #32ac82;
+  padding: 5px 10px;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .search {
+    width: 70%;
+  }
+  header .brand_info .header_nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin-left: auto;
+  }
+  header .brand_info .header_nav .search {
+    padding: 3px 10px;
+    margin-right: 10px;
+    width: 100%;
+  }
+  .sidebar {
+    display: none;
+  }
+  .icon {
+    display: none;
+  }
+  main .main .title {
+    display: none;
+  }
+  main .main .filter_section {
+    display: none;
+  }
+  main .main {
+    padding: 0px;
+  }
+  header {
+    height: 80px;
+  }
+  header h1 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 20px;
+    font-weight: 700;
+  }
+  header .brand_info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 5;
+        -ms-flex: 5;
+            flex: 5;
+    padding: 10px;
+  }
+  header .brand_info .header_nav .search input {
+    width: 70%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

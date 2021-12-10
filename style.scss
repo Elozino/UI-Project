@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500;600;700&display=swap");
+
+$bgPage: #2b2c33;
+$bgHeader: #25272e;
+$bgSearch: #494a52;
+$colorGreen: #32ac82;
+$bgButton: #38f2af;
+$bgNft: #373943;
+$bgArt: #272a34;
+$colorMain: #f2f2f2;
+
+@mixin flex($x) {
+  display: flex;
+  justify-content: $x;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: $bgHeader;
+  box-shadow: 0 1px 5px $bgSearch;
+  color: $colorMain;
+  position: sticky;
+  top: 0;
+  height: 80px;
+  @include flex(space-between);
+  h1 {
+    flex: 1;
+    padding: 40px;
+    font-weight: 700;
+  }
+  .brand_info {
+    @include flex(space-between);
+    flex: 5;
+    padding: 40px;
+    nav {
+      font-size: 1.6rem;
+      font-weight: 600;
+      div span {
+        margin-right: 1.3rem;
+        cursor: pointer;
+        padding-bottom: 20px;
+      }
+      div span:hover {
+        border-bottom: 5px solid $colorGreen;
+      }
+    }
+    .header_nav {
+      @include flex(space-between);
+      font-weight: 500;
+      width: 60%;
+      .search {
+        background-color: $bgSearch;
+        padding: 3px 15px;
+        border-radius: 3px;
+        margin-right: 20px;
+        width: 50%;
+        input {
+          outline: none;
+          padding: 10px;
+          background-color: transparent;
+          border: none;
+          color: $colorMain;
+          width: 85%;
+        }
+      }
+      .icon {
+        margin: 0 10px;
+        font-size: 2rem;
+      }
+      .user_profile {
+        @include flex(space-between);
+        img {
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  .sidebar {
+    flex: 1;
+    background-color: $bgHeader;
+    color: $colorMain;
+    padding: 40px;
+    position: sticky;
+    z-index: -1;
+    top: 80px;
+    height: calc(100vh - 80px);
+
+    .link {
+      @include flex(space-between);
+      padding: 20px 0 10px 0;
+      font-size: 2rem;
+      font-weight: 600;
+      border-bottom: 1px solid $bgSearch;
+      cursor: pointer;
+    }
+  }
+  .main {
+    flex: 5;
+    background-color: $bgPage;
+    color: $colorMain;
+    padding: 40px;
+    padding-top: 60px;
+    .title {
+      @include flex(space-between);
+      button {
+        background-color: $bgButton;
+        padding: 10px;
+        color: $bgHeader;
+        font-size: 1.15rem;
+        font-weight: 700;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+    }
+    .filter_section {
+      @include flex(space-between);
+    }
+    .filter {
+      margin: 20px 0;
+      @include flex(space-between);
+      div {
+        background-color: $bgSearch;
+        margin-right: 30px;
+        padding: 7px 15px;
+        border-radius: 5px;
+        span:first-child {
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+
+  .art_collection {
+    background-color: $bgNft;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 20px;
+    .card {
+      background-color: $bgArt;
+      border-radius: 10px;
+      img {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+      }
+      .art_info {
+        padding: 10px 20px;
+        margin-bottom: 2vw;
+        h4 {
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
+        h6 {
+          font-size: 1rem;
+          color: $bgSearch;
+        }
+      }
+      .art_price {
+        @include flex(space-between);
+        padding: 10px 20px;
+        border-top: 2px solid $bgSearch;
+        p {
+          color: $colorGreen;
+        }
+        .price {
+          color: $colorMain;
+          border-radius: 30px;
+          border: 1px solid $colorGreen;
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .search {
+    width: 70%;
+  }
+
+  header .brand_info .header_nav {
+    @include flex(space-between);
+    width: 100%;
+    margin-left: auto;
+    .search {
+      padding: 3px 10px;
+      margin-right: 10px;
+      width: 100%;
+    }
+  }
+
+  .sidebar {
+    display: none;
+  }
+  .icon {
+    display: none;
+  }
+
+  main .main .title{
+    display: none;
+  }
+  main .main .filter_section{
+    display: none;
+  }
+
+  main .main{
+    padding: 0px;
+  }
+  header {
+    height: 80px;
+    h1 {
+      flex: 1;
+      padding: 20px;
+      font-weight: 700;
+    }
+    .brand_info {
+      @include flex(space-between);
+      flex: 5;
+      padding: 10px;
+    }
+  }
+  header .brand_info .header_nav .search input{
+    width: 70%;
+  }
+  
+}
